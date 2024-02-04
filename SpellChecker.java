@@ -3,7 +3,7 @@ public class SpellChecker {
 
 
 	public static void main(String[] args) {
-		String word = "ssccsss";
+		String word = "ulximaxe";
 		int threshold = 2;
 		String[] dictionary = readDictionary("dictionary.txt");
 		String correction = spellChecker(word, threshold, dictionary);
@@ -70,7 +70,7 @@ public class SpellChecker {
 			}
 		}
 
-		if(minDistance < threshold){
+		if(minDistance <= threshold){
 			return similarWord;
 		}else{
 			return word;
