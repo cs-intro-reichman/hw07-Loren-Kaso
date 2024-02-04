@@ -3,8 +3,8 @@ public class SpellChecker {
 
 
 	public static void main(String[] args) {
-		String word = "hell0";
-		int threshold = 2;
+		String word = args[0];
+		int threshold = Integer.parseInt(args[1]);
 		String[] dictionary = readDictionary("dictionary.txt");
 		String correction = spellChecker(word, threshold, dictionary);
 		System.out.println(correction);
@@ -58,7 +58,7 @@ public class SpellChecker {
 		if(dictionary == null || word.length() == 0 || threshold < 0){
 			return word;
 		}
-	
+		
 		int minDistance = 3010;
 		String similarWord = "";
 
