@@ -3,8 +3,8 @@ public class SpellChecker {
 
 
 	public static void main(String[] args) {
-		String word = args[0];
-		int threshold = Integer.parseInt(args[1]);
+		String word = "ssccsss";
+		int threshold = 2;
 		String[] dictionary = readDictionary("dictionary.txt");
 		String correction = spellChecker(word, threshold, dictionary);
 		System.out.println(correction);
@@ -64,7 +64,7 @@ public class SpellChecker {
 
 		for (String dicWord : dictionary) {
 			int distance = levenshtein(word, dicWord);
-			if (distance < minDistance) {
+			if (distance <= minDistance) {
 				minDistance = distance;
 				similarWord = dicWord;
 			}
