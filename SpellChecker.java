@@ -59,6 +59,7 @@ public class SpellChecker {
 			return word;
 		}
 		
+		word = word.toLowerCase();
 		int minDistance = 3010;
 		String similarWord = "";
 
