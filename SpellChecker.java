@@ -70,7 +70,7 @@ public class SpellChecker {
 			}
 		}
 
-		if(minDistance <= threshold){
+		if(minDistance < threshold){
 			return similarWord;
 		}else{
 			return word;
