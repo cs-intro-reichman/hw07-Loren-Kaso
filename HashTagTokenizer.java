@@ -10,6 +10,8 @@ public class HashTagTokenizer {
 	}
 
 	public static String[] readDictionary(String fileName) {
+				//linoy feedback: who said you have 3000 lines? why not use a while loop?
+
 		String[] dictionary = new String[3000];
 
 		In in = new In(fileName);
