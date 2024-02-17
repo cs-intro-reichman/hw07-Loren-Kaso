@@ -45,6 +45,7 @@ public class SpellChecker {
 	}
 
 	public static String[] readDictionary(String fileName) {
+		//linoy feedback: this is the same method as earlier, why don't you use one method for both of the classes? 
 		String[] dictionary = new String[3000];
 
 		In in = new In(fileName);
@@ -63,6 +64,7 @@ public class SpellChecker {
 		int minDistance = 3010;
 		String similarWord = "";
 
+		//linoy feedback: Did you learn this for loop in class? 
 		for (String dicWord : dictionary) {
 			int distance = levenshtein(word, dicWord);
 			if (distance < minDistance) {
